@@ -1,0 +1,80 @@
+
+
+.whole-panel{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    
+}
+.inbox__messages{
+    height: 600px;
+    overflow-y:  scroll;
+    overflow-x: hidden;
+}
+
+
+.inbox__people{
+    background-color: #cccccc;
+
+}
+
+
+.chat_ib{
+    color:#8FA548;
+}
+
+
+.incoming__message{
+     display: flex;
+     justify-content: flex-start;
+}
+
+.outgoing__message{
+     display: flex;
+     justify-content: flex-end;
+}
+
+
+.sent__message, .received__message{
+    min-width: 5cm;
+    max-width: 80%;
+}
+
+
+.sent__message p{
+    background-color: #8FA548;
+    border-radius: 6px;
+    padding:10px;
+    margin:0;
+    
+}
+
+
+.received__message p{
+    background-color: #d9d9d9;
+    border-radius: 6px;
+    padding:10px;
+    margin:0;
+}
+
+.message__author, .time_date{
+    font-size: 10px;
+}
+.time_date{
+    float:right;
+}
+.message__author{
+    float:left;
+}
+
+input.message_form__input{
+    padding-right: 50px;
+    width: 95%;
+}
+
+
+button.message_form__button{
+    margin-left: -50px;
+    background-color: #8FA548;
+}
+
