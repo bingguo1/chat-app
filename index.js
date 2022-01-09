@@ -11,17 +11,13 @@ const io = socket(server);
 
 const activeUsers = new Set();
 
-// Static files
-//app.use(express.static("public"));
+
 app.use(express.static(__dirname + '/public'));
+///// once you set public folder and put index.html there, you don't have to set a router for index.html any more
 
-
-
-app.get('/', (req, res) => {
-    //  res.sendFile(__dirname + '/index.html');
-    //    res.sendFile('jfejfe/index.html');
-    res.sendFile(__dirname+'/public/index.html');
-});
+// app.get('/', (req, res) => {
+//     res.sendFile(__dirname+'/public/index.html');
+// });
 
 
 io.on("connection", function (socket) {
