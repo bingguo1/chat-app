@@ -1,13 +1,22 @@
 const express = require("express");
-const socket = require("socket.io");
+//const socket = require("socket.io");
 
 // App setup
 
 const app = express();
+
+const cors = require('cors');
+
 const http = require('http');
 const server = http.createServer(app);
-const io = socket(server);
 
+//https://socket.io/docs/v3/handling-cors/
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "http://localhost",
+    methods: ["GET", "POST"]
+  }
+});
 
 const activeUsers = new Set();
 

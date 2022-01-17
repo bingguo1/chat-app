@@ -37,9 +37,10 @@
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script> -->
     <!-- <script src="main.js"></script> -->
-    <script src="/socket.io/socket.io.js"></script>
+    <script src="../node_modules/socket.io/client-dist/socket.io.js"></script>
     <script>
-      var socket = io();
+        const socket = io('http://localhost:3000/');
+//      var socket = io();
       const inputField = document.querySelector(".message_form__input");
       const messageForm = document.querySelector(".message_form");
       const inboxPeople = document.querySelector(".inbox__people");
